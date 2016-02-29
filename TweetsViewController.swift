@@ -58,14 +58,6 @@ class TweetsViewController: UIViewController {
         }
     }
     
-    override func viewWillAppear(animated: Bool) {
-        if let tweets = tweets {
-            print("inside TweetsViewController\(tweets.count)")
-        }
-        
-        tableView.reloadData()
-    }
-    
     func refresh() {
         delay(2, closure: {
            TwitterClient.sharedInstance.homeTimelineWithParams(nil) { (tweets, error) -> () in
