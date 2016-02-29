@@ -84,7 +84,11 @@ class TwitterClient: BDBOAuth1SessionManager {
         POST(requestUrl, parameters: nil, success: { (task: NSURLSessionDataTask, response: AnyObject?) -> Void in
             print("tweet successful")
             tweets = [Tweet(dictionary: response as! NSDictionary)] + tweets!
-            print(tweets)
+            Tweet.kingTweets = tweets
+            NSNotificationCenter.defaultCenter().postNotificationName("updated kingTweets", object: nil)
+
+            print(Tweet.kingTweets)
+            print("hello 1")
             }) { (task: NSURLSessionDataTask?, error: NSError) -> Void in
                 print("tweet failed")
         }

@@ -9,6 +9,9 @@
 import UIKit
 
 class Tweet: NSObject {
+    
+    static var kingTweets: [Tweet]!
+    
     var user: User?
     var text: String?
     var createdAtString: String?

@@ -56,6 +56,12 @@ class TweetsViewController: UIViewController {
             
             self.tableView.reloadData()
         }
+        NSNotificationCenter.defaultCenter().addObserverForName("updated kingTweets", object: nil, queue: NSOperationQueue.mainQueue()) { (NSNotification) -> Void in
+            self.tweets = Tweet.kingTweets
+            self.tableView.reloadData()
+        }
+        
+        
     }
     
     func refresh() {
