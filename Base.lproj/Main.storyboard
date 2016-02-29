@@ -67,7 +67,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@dickc" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QWk-qe-F3f">
-                                                    <rect key="frame" x="141.5" y="6" width="41" height="15"/>
+                                                    <rect key="frame" x="141" y="6" width="41" height="15"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" red="0.47507540209999999" green="0.47507540209999999" blue="0.47507540209999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -76,16 +76,6 @@
                                                     <rect key="frame" x="294" y="6" width="18" height="15"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <color key="textColor" red="0.47507540209999999" green="0.47507540209999999" blue="0.47507540209999999" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Great! Now just four onside kicks, four more touchdowns, no first downs for Seattle, a malfunctioning game clock, ..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hNu-iV-6Wq">
-                                                    <rect key="frame" x="61" y="23" width="251" height="47"/>
-                                                    <gestureRecognizers/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="251" id="gf5-xD-a3f"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="nzK-GF-hz0">
@@ -181,26 +171,38 @@
                                                         <constraint firstAttribute="width" constant="45" id="vnW-GF-MTF"/>
                                                     </constraints>
                                                 </imageView>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Lorem ipsum dolor sit er elit  " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="klg-ux-u4c">
+                                                    <rect key="frame" x="61" y="23" width="251" height="46"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="251" id="xX2-1Z-70e"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                                                </textView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="dgE-as-LeX" firstAttribute="top" secondItem="bQS-4y-yxO" secondAttribute="top" constant="5" id="1NQ-te-EzF"/>
+                                                <constraint firstItem="klg-ux-u4c" firstAttribute="top" secondItem="dgE-as-LeX" secondAttribute="bottom" constant="2" id="53u-lW-zob"/>
+                                                <constraint firstItem="nzK-GF-hz0" firstAttribute="top" secondItem="klg-ux-u4c" secondAttribute="bottom" constant="2" id="9Jk-Dz-olY"/>
                                                 <constraint firstItem="QWk-qe-F3f" firstAttribute="bottom" secondItem="dgE-as-LeX" secondAttribute="bottom" id="EgL-CI-JL7"/>
                                                 <constraint firstItem="QWk-qe-F3f" firstAttribute="leading" secondItem="dgE-as-LeX" secondAttribute="trailing" constant="2" id="FeW-ei-2nq"/>
-                                                <constraint firstAttribute="trailing" secondItem="hNu-iV-6Wq" secondAttribute="trailing" constant="8" id="G29-ZW-vqz"/>
                                                 <constraint firstItem="dgE-as-LeX" firstAttribute="leading" secondItem="mmA-Ny-oFv" secondAttribute="trailing" constant="8" id="IXB-Pd-75b"/>
                                                 <constraint firstAttribute="trailing" secondItem="B5j-tq-llx" secondAttribute="trailing" constant="8" id="JU0-zW-gWA"/>
+                                                <constraint firstItem="nzK-GF-hz0" firstAttribute="leading" secondItem="klg-ux-u4c" secondAttribute="leading" id="L2a-pe-tLD"/>
+                                                <constraint firstItem="nzK-GF-hz0" firstAttribute="leading" secondItem="dgE-as-LeX" secondAttribute="leading" id="PwP-4H-6PU"/>
                                                 <constraint firstItem="mmA-Ny-oFv" firstAttribute="top" secondItem="bQS-4y-yxO" secondAttribute="top" constant="5" id="QZ0-SL-u9e"/>
                                                 <constraint firstItem="dgE-as-LeX" firstAttribute="baseline" secondItem="QWk-qe-F3f" secondAttribute="firstBaseline" id="RdW-te-Orp"/>
                                                 <constraint firstItem="B5j-tq-llx" firstAttribute="top" secondItem="bQS-4y-yxO" secondAttribute="topMargin" constant="-2" id="Yhh-bj-ebw"/>
+                                                <constraint firstItem="klg-ux-u4c" firstAttribute="leading" secondItem="mmA-Ny-oFv" secondAttribute="trailing" constant="8" id="Ym9-wR-Vwv"/>
+                                                <constraint firstAttribute="trailing" secondItem="klg-ux-u4c" secondAttribute="trailing" constant="8" id="bur-qX-j7u"/>
                                                 <constraint firstItem="QWk-qe-F3f" firstAttribute="top" secondItem="bQS-4y-yxO" secondAttribute="top" constant="6" id="cbI-yu-yra"/>
                                                 <constraint firstItem="QWk-qe-F3f" firstAttribute="baseline" secondItem="B5j-tq-llx" secondAttribute="baseline" id="e6c-wB-F6R"/>
                                                 <constraint firstItem="mmA-Ny-oFv" firstAttribute="top" secondItem="bQS-4y-yxO" secondAttribute="topMargin" constant="-3" id="iMA-Ti-dnn"/>
-                                                <constraint firstItem="hNu-iV-6Wq" firstAttribute="leading" secondItem="mmA-Ny-oFv" secondAttribute="trailing" constant="8" id="maK-I3-esD"/>
-                                                <constraint firstItem="hNu-iV-6Wq" firstAttribute="top" secondItem="dgE-as-LeX" secondAttribute="bottom" constant="2" id="ngm-R8-6Bu"/>
+                                                <constraint firstItem="B5j-tq-llx" firstAttribute="trailing" secondItem="klg-ux-u4c" secondAttribute="trailing" id="kTf-xd-P4i"/>
                                                 <constraint firstAttribute="bottom" secondItem="nzK-GF-hz0" secondAttribute="bottom" constant="7.5" id="ohc-hH-o1p"/>
-                                                <constraint firstItem="nzK-GF-hz0" firstAttribute="top" secondItem="hNu-iV-6Wq" secondAttribute="bottom" constant="1" id="pCk-Zv-8RT"/>
                                                 <constraint firstItem="B5j-tq-llx" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="QWk-qe-F3f" secondAttribute="trailing" constant="3" id="qxx-wI-gjc"/>
-                                                <constraint firstItem="nzK-GF-hz0" firstAttribute="leading" secondItem="hNu-iV-6Wq" secondAttribute="leading" id="za4-cC-19p"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -213,7 +215,7 @@
                                             <outlet property="reTweetButton" destination="GzD-iM-lif" id="RGx-cm-3FD"/>
                                             <outlet property="retweetCountLabel" destination="7wg-mB-NAW" id="yYu-LV-Wt4"/>
                                             <outlet property="screenNameLabel" destination="QWk-qe-F3f" id="a8w-eZ-9rI"/>
-                                            <outlet property="tweetTextLabel" destination="hNu-iV-6Wq" id="RnZ-47-bp7"/>
+                                            <outlet property="tweetTextLabel" destination="klg-ux-u4c" id="xsj-AQ-m96"/>
                                             <segue destination="hhL-Od-ScP" kind="push" identifier="TweetDetails" id="KvN-C5-68W"/>
                                         </connections>
                                     </tableViewCell>
@@ -247,7 +249,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ics-jI-YPN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1048" y="366"/>
+            <point key="canvasLocation" x="997" y="204"/>
         </scene>
         <!--Tweet Details View Controller-->
         <scene sceneID="sbM-MA-45R">

@@ -18,7 +18,7 @@ class TweetCell: UITableViewCell {
 
     @IBOutlet weak var createdAtLabel: UILabel!
     
-    @IBOutlet weak var tweetTextLabel: UILabel!
+    @IBOutlet weak var tweetTextLabel: UITextView!
     
     @IBOutlet weak var retweetCountLabel: UILabel!
     
@@ -39,6 +39,10 @@ class TweetCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        //tweetTextLabel.delegate = self
+        tweetTextLabel.scrollEnabled = false
+        tweetTextLabel.textContainerInset = UIEdgeInsetsZero;
+        tweetTextLabel.textContainer.lineFragmentPadding = 0;
         
     }
     
@@ -49,3 +53,17 @@ class TweetCell: UITableViewCell {
     }
 
 }
+
+/*
+extension TweetCell: UITextViewDelegate {
+    func textViewDidChange(textView: UITextView) {
+        let fixedWidth = textView.frame.size.width
+        textView.sizeThatFits(CGSize(width: fixedWidth, height: CGFloat.max))
+        let newSize = textView.sizeThatFits(CGSize(width: fixedWidth, height: CGFloat.max))
+        var newFrame = textView.frame
+        newFrame.size = CGSize(width: max(newSize.width, fixedWidth), height: newSize.height)
+        textView.frame = newFrame;
+    }
+}
+*/
+
